@@ -7,7 +7,7 @@ const { errors } = require('celebrate');
 const cors = require('cors');
 const { requestLogger, errorLogger } = require('./middlewares/logger');
 
-const { PORT, MONGODBADDRESS } = process.env;
+const { PORT = 3000, MONGODBADDRESS = 'mongodb://127.0.0.1/bitfilmsdb' } = process.env;
 const errorHandler = require('./middlewares/errorHandler');
 const router = require('./routes');
 
